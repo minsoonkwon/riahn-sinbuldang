@@ -425,3 +425,13 @@ html[lang="ja"] body,html[lang="zh-CN"] body{word-break:normal;overflow-wrap:any
 .price-table + .naver-discount{margin-top:14px}
 @media(max-width:480px){.naver-discount .btn{width:100%}}
 
+
+/* ── 줄바꿈: 마지막 줄에 짧은 단어만 남는 것(고아 단어) 방지 ── */
+p,li,td,.faq-a{text-wrap:pretty}
+h1,h2,h3,h4,.page-head p,.sec-head p,.hero-text p,.booking-banner p,.service-cta p,.card-body p,.field,figcaption,summary,.recommend-box li,.price-note li,.loc-info span,.footer-addr,.biz{text-wrap:balance}
+.designer-body h3 small,.fixed-bar .lbl{white-space:nowrap}
+.designer-body p{text-wrap:balance}
+html[lang="ja"] p,html[lang="ja"] li,html[lang="zh-CN"] p,html[lang="zh-CN"] li{text-wrap:balance}
+html[lang="ja"] :is(h3,td,.field,.lbl,.tag),html[lang="zh-CN"] :is(h3,.lbl,.tag,td.price){word-break:keep-all}  /* 짧은 제목·표·라벨은 단어(가타카나·한자어) 중간에서 끊지 않음 */
+a[href^="tel:"]{white-space:nowrap}
+.nw{white-space:nowrap!important}  /* text-wrap:balance 가 줄바꿈 방지를 덮어쓰지 않게 */
